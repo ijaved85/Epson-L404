@@ -1,12 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto Download PDF</title>
+    <script>
+        window.onload = function() {
+            // Create a link element
+            var link = document.createElement('a');
+            link.href = 'Epson L405 Printer.pdf'; // Path to your PDF
+            link.download = 'Epson L405 Printer.pdf'; // Name of the downloaded file
+            // Append to the body
+            document.body.appendChild(link);
+            // Trigger the download
+            link.click();
+            // Remove the link after triggering download
+            document.body.removeChild(link);
+        };
+    </script>
 </head>
 <body>
-    <h1>Your PDF is downloading...</h1>
-    <iframe src="Epson L405 Printer.pdf" style="display:none;"></iframe>
+    <h1>Your download should start shortly...</h1>
 </body>
 </html>
